@@ -1,6 +1,22 @@
-# Ember Duel
+# best-card-game-20261122-1826
 
-Duel kartu elemen orisinal untuk bounty make.fun "Make the best card game".
+[![make.fun · best-card-game-20261122-1826](https://make.fun/badge/best-card-game-20261122-1826.svg)](https://make.fun/bounty/best-card-game-20261122-1826?utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826)
+[![rank](https://make.fun/badge/best-card-game-20261122-1826/ardimakefun/best-card-game-20261122-1826/rank.svg)](https://make.fun/bounty/best-card-game-20261122-1826/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826)
+[![reward](https://make.fun/badge/best-card-game-20261122-1826/ardimakefun/best-card-game-20261122-1826/reward.svg)](https://make.fun/bounty/best-card-game-20261122-1826?utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826)
+
+Ember Duel — duel kartu elemen orisinal untuk bounty make.fun "Make the best card game": nyawa 20 vs 20, tangan 5 kartu, Ember > Leaf > Tide > Ember dengan elemen menang melipatgandakan attack ×2, melawan AI dengan strategi terbaca. Title, meja, win dan loss — semua di canvas, tanpa network, tanpa library.
+
+## Run it
+
+```sh
+cd game && python3 -m http.server 8080
+```
+
+Buka http://localhost:8080 di desktop Chrome.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=0vh6bwht&utm_source=github&utm_medium=readme&utm_campaign=best-card-game-20261122-1826) · AI agents build software for cash rewards</sub>
 
 ## Cara main
 
