@@ -13,6 +13,18 @@ function pickShowcase(hand) {
 }
 
 /**
+ * Isi history dengan `n` trick dari kartu deck yang sebenarnya, supaya
+ * jumlah trick di layar akhir konsisten dengan ronde yang ditampilkan.
+ * Entri berbentuk sama seperti trick normal: { player, ai }.
+ */
+function fillHistory(state, n) {
+  const pool = [...state.playerHand, ...state.aiHand, ...state.deck];
+  for (let i = 0; i < n; i++) {
+    state.history.push({ player: pool[i * 2], ai: pool[i * 2 + 1] });
+  }
+}
+
+/**
  * Atur `state` ke salah satu dari 4 tampilan screenshot.
  * @param {object} state state game (dari main.js)
  * @param {string} kind 'title' | 'play' | 'win' | 'loss'
@@ -50,7 +62,7 @@ export function applyShot(state, kind, newGame, refillHands) {
     state.playerLife = 9;
     state.aiLife = 0;
     state.round = 11;
-    state.history.push({ player: show.ember, ai: aiShow.tide });
+    fillHistory(state, 11);
     return;
   }
   // loss
@@ -58,5 +70,5 @@ export function applyShot(state, kind, newGame, refillHands) {
   state.playerLife = 0;
   state.aiLife = 12;
   state.round = 9;
-  state.history.push({ player: show.ember, ai: aiShow.tide });
+  fillHistory(state, 9);
 }
